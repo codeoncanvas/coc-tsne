@@ -6,12 +6,13 @@
         author=""
         summary="Wrapper for Laurens van der Maaten's t-SNE implementation"
         license=""
+        url="https://github.com/codeoncanvas/coc-tsne"
         git="git@github.com:codeoncanvas/coc-tsne.git"
-
+        version=""
+        library=""
     >
-
-    <includePath>lib/bhtsne</includePath>
-    <includePath>include</includePath>
+    <supports os="macosx" />
+    <supports os="msw" />
 
     <headerPattern>src/*.h</headerPattern>
 	<sourcePattern>src/*.cpp</sourcePattern>
@@ -19,5 +20,14 @@
 	<headerPattern>lib/bhtsne/*.h</headerPattern>
 	<sourcePattern>lib/bhtsne/*.cpp</sourcePattern>
 
+    <includePath>lib/bhtsne</includePath>
+
+    <platform os="msw">
+        <includePath system="false">src</includePath>
+        <includePath system="false">lib/bhtsne</includePath>
+    </platform>
+    
     </block>
 </cinder>
+
+    
