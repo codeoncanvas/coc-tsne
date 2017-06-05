@@ -22,6 +22,8 @@
 
 #include "tsne.h"
 
+namespace coc {
+
 class CinderTSNE {
 public:
     std::vector<std::vector<double>> run(std::vector<std::vector<float>> &data,
@@ -47,3 +49,5 @@ private:
 
     int iter, max_iter;
 };
+	
+}

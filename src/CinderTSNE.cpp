@@ -21,6 +21,8 @@
 
 #include "CinderTSNE.h"
 
+namespace coc {
+	
 
 std::vector<std::vector<double>> CinderTSNE::run(
         std::vector<std::vector<float>> &data, int dims, double perplexity,
@@ -118,4 +120,6 @@ std::vector<std::vector<double> > CinderTSNE::iterate(){
 void CinderTSNE::finish() {
     delete(X);
     delete(Y);
+}
+
 }
